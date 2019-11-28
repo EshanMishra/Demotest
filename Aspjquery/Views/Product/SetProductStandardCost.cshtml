@@ -1,0 +1,44 @@
+﻿
+
+@model Aspjquery.PartialModels.PartialProductCostHistory
+
+@using (Html.BeginForm("setStandartCost", "Product", FormMethod.Post))
+{
+
+    <form>
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- PANEL HEADLINE -->
+                            <div class="panel panel-headline">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Set Product Cost History</h3>
+                                    <p class="panel-subtitle">Here create your product Sub category..</p>
+                                </div>
+                                <div class="panel-body">
+                                    @Html.ValidationMessageFor(x => x.Product, "", new { @class = "text-danger" })
+                                    @Html.DropDownListFor(x => x.ProductID, new SelectList(Model.Product, "ProductID", "Name", "--Select Product--"), new { @class = "form-control" })
+                                    <br />
+
+                                    @Html.ValidationMessageFor(x => x.StandardCost, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.StandardCost, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.StandardCost) })
+
+                                    <br>
+                                    <input type="submit" class="btn btn-info" value="Submit">
+                                </div>
+
+                                <div></div>
+                                <!-- END PANEL HEADLINE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+}

@@ -1,0 +1,67 @@
+﻿
+
+@model Aspjquery.PartialModels.PartialPerson
+
+
+
+<form>
+    <div class="main">
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- PANEL HEADLINE -->
+                        <div class="panel panel-headline">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Person</h3>
+                                <p class="panel-subtitle">Here create Person..</p>
+                            </div>
+                            <div class="panel-body">
+                                <input type="text" name="PersonType" class="form-control" placeholder="PersonType" />
+                                <br />
+                                <input type="text" name="NameStyle" class="form-control" placeholder="NameStyle" />
+
+                                <br />
+                                <input type="text" name="FirstName" class="form-control" placeholder="FirstName" />
+
+
+                                <br />
+                                <input type="text" name="MiddleName" class="form-control" placeholder="MiddleName" />
+
+
+                                <br />
+                                <input type="text" name="LastName" class="form-control" placeholder="LastName" />
+
+
+                                <br />
+                                <input type="text" name="EmailPromotion" class="form-control" placeholder="EmailPromotion" />
+
+
+                                <br />
+
+                                <input type="submit" class="btn btn-info" value="Submit">
+                            </div>
+
+                            <div></div>
+                            <!-- END PANEL HEADLINE -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+@section Scripts {
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           // alert("hello");
+        })
+
+
+
+    </script>
+    }

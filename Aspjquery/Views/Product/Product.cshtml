@@ -1,0 +1,88 @@
+﻿
+
+@model Aspjquery.PartialModels.PartialProduct
+
+@using (Html.BeginForm("createProduct", "Product", FormMethod.Post))
+{
+
+    <form>
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- PANEL HEADLINE -->
+                            <div class="panel panel-headline">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Product Sub Category Master</h3>
+                                    <p class="panel-subtitle">Here create your product Sub category..</p>
+                                </div>
+                                <div class="panel-body">
+
+
+                                    @Html.ValidationMessageFor(x => x.ProductSubcategoryList, "", new { @class = "text-danger" })
+                                    @Html.DropDownListFor(x => x.ProductSubcategoryID, new SelectList(Model.ProductSubcategoryList, "ProductSubcategoryID", "Name", "--Select Sub Category--"), new { @class = "form-control" })
+                                    <br />
+
+                                    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.Name) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.ProductNumber, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.ProductNumber, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.ProductNumber) })
+
+                                    <br>
+                                    <label>Make Flag</label>
+                                    <br />
+                                    @Html.ValidationMessageFor(x => x.MakeFlag, "", new { @class = "text-danger" })
+                                    @Html.CheckBoxFor(x => x.MakeFlag)
+
+                                    <br>
+                                    <label>Finished Goods Flag</label>
+                                    <br />
+                                    @Html.ValidationMessageFor(x => x.FinishedGoodsFlag, "", new { @class = "text-danger" })
+                                    @Html.CheckBoxFor(x => x.FinishedGoodsFlag)
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.SafetyStockLevel, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.SafetyStockLevel, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.SafetyStockLevel) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.ReorderPoint, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.ReorderPoint, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.ReorderPoint) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.StandardCost, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.StandardCost, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.StandardCost) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.ListPrice, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.ListPrice, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.ListPrice) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.DaysToManufacture, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.DaysToManufacture, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.DaysToManufacture) })
+
+                                    <br>
+                                    @Html.ValidationMessageFor(x => x.SellStartDate, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.SellStartDate, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.SellStartDate) })
+
+                                    <br>
+
+
+                                    <input type="submit" class="btn btn-info" value="Submit">
+                                </div>
+
+                                <div></div>
+                                <!-- END PANEL HEADLINE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+}

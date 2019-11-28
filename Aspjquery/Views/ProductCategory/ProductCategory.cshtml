@@ -1,0 +1,39 @@
+﻿@model Aspjquery.PartialModels.PartialProductCategory
+
+    @using (Html.BeginForm("CreateCategory","ProductCategory",  FormMethod.Post))
+    {
+
+        <form>
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- PANEL HEADLINE -->
+                            <div class="panel panel-headline">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Product Category Master</h3>
+                                    <p class="panel-subtitle">Here create your product category..</p>
+                                </div>
+                                <div class="panel-body">
+                                    @*<input type="text" class="form-control" placeholder="Category Name">*@
+                                    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = Html.DisplayNameFor(x => x.Name)})
+                               
+                                    <br>
+                                    <input type="submit" class="btn btn-info" value="Submit">
+                                </div>
+
+                                <div></div>
+                                <!-- END PANEL HEADLINE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+    }
